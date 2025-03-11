@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Functions</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="excel.html">Excel</a></li>
+        </ul>
+    </nav>
+
+    <form id="excel-form">
+        <label>Enter numbers (space-separated): 
+            <input type="text" id="numberField">
+        </label>
+
+        <p>Select Function:</p>
+        <div class="radio-group">
+            <label><input type="radio" name="calcOption" value="sum" checked> AutoSum</label>
+            <label><input type="radio" name="calcOption" value="average"> Average</label>
+            <label><input type="radio" name="calcOption" value="max"> Max</label>
+            <label><input type="radio" name="calcOption" value="min"> Min</label>
+        </div>
+
+        <button type="button" id="calculate-btn">Calculate</button>
+    </form>
+
+    <div id="calcOutput">Result: </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

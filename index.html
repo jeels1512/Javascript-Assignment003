@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="excel.html">Excel</a></li>
+        </ul>
+    </nav>
+
+    <form id="user-form">
+        <label>First Name: <input type="text" id="first-name"></label>
+        <label>Last Name: <input type="text" id="last-name"></label>
+        <label>Email: <input type="email" id="email"></label>
+        <label>Address: <input type="text" id="address"></label>
+        <label>City: <input type="text" id="city"></label>
+        <label>Province: <input type="text" id="province"></label>
+
+        <p>Select Membership:</p>
+        <label><input type="radio" name="membership" value="Premium" checked> Premium</label>
+        <label><input type="radio" name="membership" value="Standard"> Standard</label>
+        <label><input type="radio" name="membership" value="Basic"> Basic</label>
+
+        <button type="button" id="submit-btn">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <div id="userDetailsDisplay">
+        <h2>Recipt:</h2>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
