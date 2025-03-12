@@ -85,4 +85,4 @@ document.getElementById("calculate-btn")?.addEventListener("click", function () 
     }
 
     console.log("Calculation Result:", result);
-});
+};
