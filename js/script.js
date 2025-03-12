@@ -46,20 +46,33 @@ document.getElementById("calculate-btn")?.addEventListener("click", function () 
     let result = null;
 
     if (selectedFunction) {
-        switch (selectedFunction.value) {
-            case "sum":
-                result = numbers.reduce((a, b) => a + b, 0);
-                break;
-            case "average":
-                result = numbers.reduce((a, b) => a + b, 0) / numbers.length;
-                break;
-            case "max":
-                result = Math.max(...numbers);
-                break;
-            case "min":
-                result = Math.min(...numbers);
-                break;
+      if (selectedFunction) {
+    if (selectedFunction.value === "sum") {
+        result = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            result += numbers[i];
         }
+    } else if (selectedFunction.value === "average") {
+        let sum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        result = sum / numbers.length;
+    } else if (selectedFunction.value === "max") {
+        result = numbers[0];
+        for (let i = 1; i < numbers.length; i++) {
+            if (numbers[i] > result) {
+                result = numbers[i];
+            }
+        }
+    } else if (selectedFunction.value === "min") {
+        result = numbers[0];
+        for (let i = 1; i < numbers.length; i++) {
+            if (numbers[i] < result) {
+                result = numbers[i];
+            }
+        }
+    }
 
         // If a valid function was found, display the result
         if (result !== null) {
